@@ -41,29 +41,39 @@ form.addEventListener("submit", (e: Event) => {
 });
 
 //Generics
-const addUID = <T extends { name: string }>(obj: T) => {
-  let uid = Math.floor(Math.random() * 100);
-  return { ...obj, uid };
-};
+// const addUID = <T extends { name: string }>(obj: T) => {
+//   let uid = Math.floor(Math.random() * 100);
+//   return { ...obj, uid };
+// };
 
-let doc1 = addUID({ name: "yoshi", age: 40 });
-// let doc2 = addUID("hello");
-console.log(doc1.name); //because of the <T>, doc1.name Wont have error
+// let doc1 = addUID({ name: "yoshi", age: 40 });
+// // let doc2 = addUID("hello");
+// console.log(doc1.name); //because of the <T>, doc1.name Wont have error
+
+//Enums: store a set of constants, keywords & associate 'em with numeric value
+enum ResourceType {
+  BOOK,
+  AUTHOR,
+  FILM,
+  DIRECTOR,
+  PERSON,
+}
 
 //with interfaces
 interface Resource<T> {
   uid: number;
-  resourceName: string;
+  resourceType: ResourceType;
   data: T; //T is any type of value
 }
-const doc3: Resource<object> = {
+const docone: Resource<object> = {
   uid: 1,
-  resourceName: "person",
-  data: { name: "shaun" },
+  resourceType: ResourceType.BOOK,
+  data: { title: "name of the wind" },
 };
-const doc4: Resource<string[]> = {
-  uid: 2,
-  resourceName: "shoppingList",
-  data: ["break", "milk"],
+const doctwo: Resource<object> = {
+  uid: 10,
+  resourceType: ResourceType.PERSON,
+  data: { name: "yoshi" },
 };
-console.log(doc4, doc3);
+
+console.log(docone, doctwo);
