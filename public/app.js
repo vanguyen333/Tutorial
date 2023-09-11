@@ -29,3 +29,22 @@ form.addEventListener("submit", (e) => {
     }
     list.render(doc, type.value, "end");
 });
+//Generics
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let doc1 = addUID({ name: "yoshi", age: 40 });
+// let doc2 = addUID("hello");
+console.log(doc1.name); //because of the <T>, doc1.name Wont have error
+const doc3 = {
+    uid: 1,
+    resourceName: "person",
+    data: { name: "shaun" },
+};
+const doc4 = {
+    uid: 2,
+    resourceName: "shoppingList",
+    data: ["break", "milk"],
+};
+console.log(doc4, doc3);

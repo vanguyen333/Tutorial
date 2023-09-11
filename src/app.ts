@@ -39,3 +39,31 @@ form.addEventListener("submit", (e: Event) => {
 
   list.render(doc, type.value, "end");
 });
+
+//Generics
+const addUID = <T extends { name: string }>(obj: T) => {
+  let uid = Math.floor(Math.random() * 100);
+  return { ...obj, uid };
+};
+
+let doc1 = addUID({ name: "yoshi", age: 40 });
+// let doc2 = addUID("hello");
+console.log(doc1.name); //because of the <T>, doc1.name Wont have error
+
+//with interfaces
+interface Resource<T> {
+  uid: number;
+  resourceName: string;
+  data: T; //T is any type of value
+}
+const doc3: Resource<object> = {
+  uid: 1,
+  resourceName: "person",
+  data: { name: "shaun" },
+};
+const doc4: Resource<string[]> = {
+  uid: 2,
+  resourceName: "shoppingList",
+  data: ["break", "milk"],
+};
+console.log(doc4, doc3);
