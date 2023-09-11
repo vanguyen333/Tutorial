@@ -30,11 +30,14 @@ const list = new ListTemplate(ul);
 
 form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
+  let values: [string, string, number];
+  values = [toform.value, details.value, amount.valueAsNumber];
+
   let doc: HasFormatter;
   if (type.value === "invoice") {
-    doc = new Invoice(toform.value, details.value, amount.valueAsNumber);
+    doc = new Invoice(...values);
   } else {
-    doc = new Payment(toform.value, details.value, amount.valueAsNumber);
+    doc = new Payment(...values);
   }
 
   list.render(doc, type.value, "end");
@@ -77,3 +80,18 @@ const doctwo: Resource<object> = {
 };
 
 console.log(docone, doctwo);
+
+//typles
+let arr = ["ryu", 25, true];
+arr[0] = false;
+arr[1] = "yoshi";
+arr = [30, false, "yoshi"];
+
+let tup: [string, number, boolean] = ["ryu", 25, true];
+// tup[0] = false;//error
+tup[0] = "ken";
+
+let student: [string, number];
+// student = [223423, "chun-li"];error
+
+student = ["chun-li", 223423];

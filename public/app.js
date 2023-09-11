@@ -20,12 +20,14 @@ const ul = document.querySelector("ul");
 const list = new ListTemplate(ul);
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    let values;
+    values = [toform.value, details.value, amount.valueAsNumber];
     let doc;
     if (type.value === "invoice") {
-        doc = new Invoice(toform.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }
     else {
-        doc = new Payment(toform.value, details.value, amount.valueAsNumber);
+        doc = new Payment(...values);
     }
     list.render(doc, type.value, "end");
 });
@@ -57,3 +59,14 @@ const doctwo = {
     data: { name: "yoshi" },
 };
 console.log(docone, doctwo);
+//typles
+let arr = ["ryu", 25, true];
+arr[0] = false;
+arr[1] = "yoshi";
+arr = [30, false, "yoshi"];
+let tup = ["ryu", 25, true];
+// tup[0] = false;//error
+tup[0] = "ken";
+let student;
+// student = [223423, "chun-li"];error
+student = ["chun-li", 223423];
