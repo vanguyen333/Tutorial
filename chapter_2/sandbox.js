@@ -1,13 +1,14 @@
-// Strings
+let email = "mario@thenetninja.co.uk";
 
-let firstName = "BandonSon";
-// console.log(firstName[0]);
-//string length
-// console.log(firstName.length);
-//string method
-// console.log(firstName.toUpperCase(0));
+// let result = email.lastIndexOf("n");
 
-let index = firstName.indexOf("S");
-console.log(index);
+// console.log(result);//14
 
-//common string methods
+// let result = email.slice(0, 5); //mario, 0,1,2,3,4
+// console.log(result);
+
+// let result = email.substring(4, 10); //o@then, the second num specifies how many letter we want
+// console.log(result);
+
+let result = email.replace("m", "w");
+console.log(result);
