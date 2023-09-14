@@ -1,16 +1,15 @@
-let radius = 10;
-const pi = 3.14;
+//template strings
+const title = "Best reads of 2019";
+const author = "Mario";
+const likes = 30;
 
-// console.log(3 % 3); //getting remainder: 0
-// let result = pi * radius ** 2; //314
+let result = `The blog called ${title} by ${author} has ${likes} likes`;
+console.log(result);
 
-//order of operation :B I D M A S bracket, **, Division, multiply, add, sub
-
-// let result = 5 * (10 - 3) ** 2; //5* [(10-3)**2]: 245
-
-let likes = 10;
-likes++; //likes = likes + 1
-likes += 3; //likes = likes + 3
-
-//NaN
-let nan = 3 / "hello"; //NaN
+//  create html templates
+let html = `
+<h2>${title}</h2>
+<p>By ${author}</p>
+<span>This blog has ${likes} likes</span>
+`;
+console.log(html);
