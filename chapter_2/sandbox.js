@@ -1,14 +1,16 @@
-let email = "mario@thenetninja.co.uk";
+let radius = 10;
+const pi = 3.14;
 
-// let result = email.lastIndexOf("n");
+// console.log(3 % 3); //getting remainder: 0
+// let result = pi * radius ** 2; //314
 
-// console.log(result);//14
+//order of operation :B I D M A S bracket, **, Division, multiply, add, sub
 
-// let result = email.slice(0, 5); //mario, 0,1,2,3,4
-// console.log(result);
+// let result = 5 * (10 - 3) ** 2; //5* [(10-3)**2]: 245
 
-// let result = email.substring(4, 10); //o@then, the second num specifies how many letter we want
-// console.log(result);
+let likes = 10;
+likes++; //likes = likes + 1
+likes += 3; //likes = likes + 3
 
-let result = email.replace("m", "w");
-console.log(result);
+//NaN
+let nan = 3 / "hello"; //NaN
