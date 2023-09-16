@@ -41,11 +41,11 @@
 // name.toUpperCase();
 
 //MATH OBJECT
-console.log(Math);
-console.log(Math.PI);
-console.log(Math.E);
+// console.log(Math);
+// console.log(Math.PI);
+// console.log(Math.E);
 
-const area = 7.7;
+// const area = 7.7;
 
 // console.log(Math.round(area)); //round to the nearest
 // console.log(Math.floor(area)); //round down
@@ -53,5 +53,19 @@ const area = 7.7;
 // console.log(Math.trunc(area)); //round to integer
 
 //random number
-const random = Math.round(Math.random() * 10);
-console.log(random);
+// const random = Math.round(Math.random() * 10);
+// console.log(random);
+
+//PRIMITIEVE values
+// let scoreOne = 50;
+// let scoreTwo = scoreOne;
+
+// console.log(`scoreOne:${scoreOne}`, `scoreTwo:${scoreTwo}`); // scoreOne:50 scoreTwo:50
+// scoreOne = 100;
+// console.log(`scoreOne:${scoreOne}`, `scoreTwo:${scoreTwo}`); //scoreOne:100 scoreTwo:50
+
+const userOne = { name: "ryu", age: 30 };
+const userTwo = userOne;
+console.log(userOne, userTwo);
+userOne.age = 40;
+console.log(userOne, userTwo);
