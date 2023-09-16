@@ -10,7 +10,7 @@
 // console.log(errors);
 // console.log(paras[0]);
 
-const title = document.getElementById("page-title");
+// const title = document.getElementById("page-title");
 // console.log(title);
 
 const errors = document.getElementsByClassName("error");
@@ -40,6 +40,27 @@ const content = document.querySelector(".content");
 // console.log(content);
 
 const people = ["mario", "luigi", "yoshi"];
-people.forEach((person) => {
-  content.innerHTML += `<p>${person}</p>`;
-});
+// people.forEach((person) => {
+//   content.innerHTML += `<p>${person}</p>`;
+// });
+
+// const link = document.querySelector("a");
+// console.log(link.getAttribute("href"));
+// link.setAttribute("href", "https://www.thenetninja.co.uk");
+// link.innerText = "The Net Ninja website";
+
+// const msg = document.querySelector("p");
+// console.log(msg.getAttribute("class"));
+// msg.setAttribute("class", "success");
+// msg.setAttribute("style", "color:green");
+
+const title = document.querySelector("h1");
+// title.setAttribute("style", "margin: 50px");
+
+console.log(title.style);
+console.log(title.style.color);
+
+title.style.margin = "50px";
+title.style.color = "crimson";
+title.style.fontSize = "60px";
+title.style.margin = ""; //delete the previous margin of 50px
