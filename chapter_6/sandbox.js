@@ -27,19 +27,19 @@ const errors = document.getElementsByClassName("error");
 // console.log(para.innerHTML);
 // para.innerText += " ninjas are awesome";
 // console.log(para.innerHTML);
-const paras = document.querySelectorAll("p");
+// const paras = document.querySelectorAll("p");
 // paras.forEach((para) => {
 //   console.log(para.innerText);
 //   para.innerText += "new text";
 // });
 
-const content = document.querySelector(".content");
+// const content = document.querySelector(".content");
 // console.log(content.innerText);
 // console.log(content.innerHTML);
 // content.innerHTML = "<h2>THIS IS A NEW H2</h2>";
 // console.log(content);
 
-const people = ["mario", "luigi", "yoshi"];
+// const people = ["mario", "luigi", "yoshi"];
 // people.forEach((person) => {
 //   content.innerHTML += `<p>${person}</p>`;
 // });
@@ -54,13 +54,34 @@ const people = ["mario", "luigi", "yoshi"];
 // msg.setAttribute("class", "success");
 // msg.setAttribute("style", "color:green");
 
-const title = document.querySelector("h1");
-// title.setAttribute("style", "margin: 50px");
+// const title = document.querySelector("h1");
+// // title.setAttribute("style", "margin: 50px");
 
-console.log(title.style);
-console.log(title.style.color);
+// console.log(title.style);
+// console.log(title.style.color);
 
-title.style.margin = "50px";
-title.style.color = "crimson";
-title.style.fontSize = "60px";
-title.style.margin = ""; //delete the previous margin of 50px
+// title.style.margin = "50px";
+// title.style.color = "crimson";
+// title.style.fontSize = "60px";
+// title.style.margin = ""; //delete the previous margin of 50px
+
+// const content = document.querySelector("p");
+// console.log(content.classList);
+// content.classList.add("error");
+// content.classList.remove("error");
+// content.classList.add("success");
+
+const paras = document.querySelectorAll("p");
+paras.forEach((p) => {
+  //   console.log(p.textContent);
+  if (p.textContent.includes("error")) {
+    p.classList.add("error");
+  }
+  if (p.innerText.includes("success")) {
+    p.classList.add("success");
+  }
+});
+
+const title = document.querySelector(".title");
+title.classList.toggle("test");
+title.classList.toggle("test");
