@@ -1,3 +1,5 @@
+// const contestants = document.querySelectorAll(".contestant");
+// Array.from(contestants)
 const contestants = document.querySelectorAll(".contestant");
 
 Array.from(contestants).forEach((element) =>
