@@ -44,7 +44,10 @@ function checkWin(choice) {
     (choice === "scissors" && botChoice === "paper") ||
     (choice === "spock" && botChoice === "rock") ||
     (choice === "spock" && botChoice === "scissors") ||
-    (choice === "lizard" && botChoice === "spock")
+    (choice === "lizard" && botChoice === "paper") ||
+    (choice === "lizard" && botChoice === "spock") ||
+    (choice === "scissors" && botChoice === "lizard") ||
+    (choice === "paper" && botChoice === "spock")
   ) {
     console.log("won");
   } else if (choice === botChoice) {
